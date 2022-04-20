@@ -1,0 +1,128 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /* Layout */
+    --mobile-vw: 375px;
+    --desktop-vw: 1440;
+
+    /* Color */
+    --clr-primary: hsl(185, 75%, 39%);
+    --clr-secondary: hsl(229, 23%, 23%);
+    --clr-accent: hsl(227, 10%, 46%);
+
+    --clr-font: hsl(0, 0%, 59%);
+
+    /* Typography */
+    --ff-main: 'Kumbh Sans', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 100vw;
+    gap: 2rem;
+    padding-inline: 1rem;
+    background-color: var(--clr-primary);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    background-position: top -50vh left -15rem, bottom -50vh right -15rem;
+}
+
+hr {
+    display: block;
+    border: none;
+    border-bottom: 1px solid var(--clr-font);
+    padding-top: 1rem;
+}
+
+
+.card {
+    width: 350px;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: white;
+    font-family: var(--ff-main);
+    position: relative;
+    text-align: center;
+    box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card__pattern {
+    width: 100%;
+    height: 140px;
+    background-image: url(images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile__img {
+    display: block;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90px;
+    margin: auto;
+}
+
+.profile__name {
+    padding-top: 4.5rem;
+    font-size: 1.5rem;
+}
+
+.profile__name,
+.stats--number {
+    color: var(--clr-secondary);
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.profile__age {
+    padding-left: 0.25rem;
+}
+
+.location,
+.profile__age,
+.stats {
+    font-weight: 400;
+    color: var(--clr-accent);
+}
+
+.location {
+    padding-block: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    padding-block: 1.5rem;
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.stats--number {
+    display: block;
+    padding-bottom: 0.25rem;
+    letter-spacing: normal;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
